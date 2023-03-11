@@ -1,5 +1,3 @@
-# Audio
-af.fast_track_multiplier=1
 
 # Blurs
 ro.surface_flinger.supports_background_blur=1
