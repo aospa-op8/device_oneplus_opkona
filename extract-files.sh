@@ -32,12 +32,6 @@ SECTION=
 
 while [ "${#}" -gt 0 ]; do
     case "${1}" in
-        --only-common )
-                ONLY_COMMON=true
-                ;;
-        --only-target )
-                ONLY_TARGET=true
-                ;;
         -n | --no-cleanup )
                 CLEAN_VENDOR=false
                 ;;

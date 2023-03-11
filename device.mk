@@ -23,8 +23,6 @@ PRODUCT_PACKAGES += \
     checkpoint_gc \
     otapreopt_script
 
-$(call inherit-product, vendor/OnePlusLab/OnePlusLab.mk)
-
 # AAPT
 PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := xxhdpi
@@ -139,14 +137,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.keymaster@4.1.vendor
 
-# KProfiles
-PRODUCT_PACKAGES += \
-    KProfiles
-
-# Livedisplay
-PRODUCT_PACKAGES += \
-    vendor.lineage.livedisplay@2.1-service.oplus
-
 # Media
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/media_codecs_vendor.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_kona_vendor.xml \
@@ -201,7 +191,7 @@ TARGET_COMMON_QTI_COMPONENTS := all
 
 # Sensors
 PRODUCT_PACKAGES += \
-    android.hardware.sensors@2.1-service.multihal_oplus \
+    android.hardware.sensors@2.0-service.multihal \
     libsensorndkbridge \
     sensors.oplus
 
@@ -229,10 +219,6 @@ PRODUCT_SOONG_NAMESPACES += \
 
 # Storage
 $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
-
-# Touch
-PRODUCT_PACKAGES += \
-    vendor.lineage.touch@1.0-service.oplus
 
 # Update engine
 PRODUCT_PACKAGES += \
